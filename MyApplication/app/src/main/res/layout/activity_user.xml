@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo"
+    tools:context=".UserActivity">
+
+    <TextView
+        android:id="@+id/txtvCorreo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="98dp"
+        android:text="Usuario:"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtvContraseña"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="40dp"
+        android:text="Contraseña:"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtvCorreo" />
+
+    <EditText
+        android:id="@+id/edtxtUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="49dp"
+        android:layout_marginTop="90dp"
+        android:editable="true"
+        android:ems="10"
+        android:hint="Usuario"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textIsSelectable="false"
+        app:layout_constraintStart_toEndOf="@+id/txtvCorreo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnCambiarDatos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="152dp"
+        android:text="Cambiar Datos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtextPassword" />
+
+    <Button
+        android:id="@+id/btnDeleteAccount"
+        android:layout_width="161dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="36dp"
+        android:backgroundTint="#FF0000"
+        android:text="CERRAR CUENTA"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCambiarDatos" />
+
+    <Button
+        android:id="@+id/btnUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="151dp"
+        android:text="Actualizar Datos"
+        app:layout_constraintStart_toEndOf="@+id/btnCambiarDatos"
+        app:layout_constraintTop_toBottomOf="@+id/edtextPassword" />
+
+    <Button
+        android:id="@+id/btnLogOut"
+        android:layout_width="184dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="36dp"
+        android:text="CERRAR SESION"
+        app:layout_constraintStart_toEndOf="@+id/btnDeleteAccount"
+        app:layout_constraintTop_toBottomOf="@+id/btnUpdate" />
+
+    <Switch
+        android:id="@+id/switchPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="208dp"
+        android:layout_marginTop="19dp"
+        android:minHeight="48dp"
+        android:text="Mostrar Contraseña"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtextPassword" />
+
+    <EditText
+        android:id="@+id/edtextPassword"
+        android:layout_width="200dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="33dp"
+        android:layout_marginBottom="19dp"
+        android:ems="10"
+        android:inputType="text|textPassword"
+        android:text="Name"
+        app:layout_constraintBottom_toTopOf="@+id/switchPass"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtvContraseña"
+        app:layout_constraintTop_toBottomOf="@+id/edtxtUser" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
